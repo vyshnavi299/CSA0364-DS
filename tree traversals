@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure for a node in the binary tree
+
 struct Node {
     int data;
     struct Node* left;
     struct Node* right;
 };
 
-// Function to create a new node
+
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -17,7 +17,7 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Function to perform inorder traversal
+
 void inorderTraversal(struct Node* root) {
     if (root != NULL) {
         inorderTraversal(root->left);
@@ -26,7 +26,7 @@ void inorderTraversal(struct Node* root) {
     }
 }
 
-// Function to perform preorder traversal
+
 void preorderTraversal(struct Node* root) {
     if (root != NULL) {
         printf("%d ", root->data);
@@ -35,7 +35,7 @@ void preorderTraversal(struct Node* root) {
     }
 }
 
-// Function to perform postorder traversal
+
 void postorderTraversal(struct Node* root) {
     if (root != NULL) {
         postorderTraversal(root->left);
@@ -45,7 +45,7 @@ void postorderTraversal(struct Node* root) {
 }
 
 int main() {
-    // Creating a sample binary tree
+    
     struct Node* root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);
